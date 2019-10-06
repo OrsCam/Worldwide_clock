@@ -1,0 +1,155 @@
+html {
+      background:  #33cccc; /*vert clair*/
+      font-family:'georgia';
+      text-align: center;
+      font-size: 20px;
+    }
+
+body {
+	background-width: 1280px 
+    background-height: 800px;
+    background-repeat: : no-repeat;
+}
+
+h1 {
+	color: white;
+}
+
+img {
+	position: relative;
+	align-content: center;
+	box-shadow: 0px 0px 0px black;
+	z-index: 2;
+}
+
+footer {
+	font-size: 12px;
+	color: white;
+}
+
+li {
+	list-style: none;
+	font-family:'georgia';
+    text-align: center;
+    font-size: 20px;
+}
+
+.element
+{
+	text-decoration: none;
+	color: white;
+}
+
+
+.element:underlined
+{
+   text-decoration: underline;
+   color: white;
+}
+
+.element:hover
+{
+	color: #006666; /* Vert foncé */
+}
+
+.colorlc
+{
+	text-decoration: none;
+	color: #006666; /* Vert foncé */
+}
+
+.colorlc:underlined
+{
+   text-decoration: underline;
+   color: #006666; /* Vert foncé */
+}
+
+.colorlc:hover
+{
+	color: #b3b3cc; /* gris */
+}
+
+ul {
+  margin : 0;
+  padding : 0;
+}
+
+.littlecircle-la {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+.littlecircle-ba {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+.littlecircle-p {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+.littlecircle-d {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+.littlecircle-b {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+.littlecircle-s {
+      position: relative;
+      margin-top: 14%;
+      margin-bottom: 86%;
+      margin-right: 65.5%;
+      margin-left: 34.5%;
+      z-index:1; 
+      font-size: 50px;
+      font-color: #33cccc; /*vert clair*/
+      color: #33cccc; /*vert clair*/
+      text-align: center;
+}
+
+

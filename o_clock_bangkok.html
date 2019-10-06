@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>O'Clock !</title>
+</head>
+
+<body>
+  <br/>
+  <h1>Bangkok time</h1><br/>
+  <div class="clock">
+    <div class="clock-face">
+    <div class="littlecircle"></div>
+      <div class="hand hour-hand"></div>
+      <div class="hand min-hand"></div>
+      <div class="hand second-hand"></div>
+
+    </div>
+  </div>
+
+  <style>
+    html {
+      background: #D58490;
+      background-size: cover;
+      font-family:'georgia';
+      text-align: center;
+      font-size: 10px;
+      color: white;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid white;
+      border-radius: 50%;
+      margin:50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow: 
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px);
+    }
+
+    .littlecircle {
+      position: absolute;
+      width: 0.2rem;
+      height: 0.2rem;
+      border: 10px solid white;
+      border-radius: 100%;
+      margin: 145px auto;
+      margin-right: 46%;
+      margin-left: 46%;
+      background-color:white;
+      z-index:1;
+    }
+    
+    .hand {
+      width: 50%;
+      height:6px;
+      background:black;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate (90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .hour-hand {
+      width: 50%;
+      height:9px;
+      background:black;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate (90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+
+    .min-hand {
+      width: 50%;
+      height:6px;
+      background:#811453;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate (90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+    }
+
+    .second-hand {
+      width: 50%;
+      height:5px;
+      background:#FCD21C;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate (90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+    }
+
+  </style> 
+
+    <script>
+      
+      const secondDiv = document.getElementsByClassName('second-hand');
+      const minDiv = document.getElementsByClassName('min-hand');
+      const hourDiv = document.getElementsByClassName('hour-hand');
+
+    function setTime() {
+
+       const now = new Date ();
+       const offset = +7 * 3600000;
+       now.setTime(now.getTime() + offset + now.getTimezoneOffset() * 60000);
+
+        const seconds = now.getSeconds();
+        const secDeg = ((seconds/60)*360 + 90);
+        secondDiv[0].style.transform = `rotate(${secDeg}deg)`;
+
+        const mins = now.getMinutes();
+        const minDeg = ((mins/60)*360) + ((seconds/60)*6) + 90; minDiv[0].style.transform = `rotate(${minDeg}deg)`;
+
+        const hour = now.getHours();
+        const hourDeg = ((hour/12)*360) + ((mins/60)*30) + 90; hourDiv[0].style.transform = `rotate(${hourDeg}deg)`;
+    }
+
+    setInterval(setTime,1000);
+
+   	
+
+    </script>
+
+</body>
+
+</html>
